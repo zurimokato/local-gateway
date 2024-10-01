@@ -14,6 +14,8 @@ public class GateWayConfig {
                 .routes()
                 .route(r -> r.path("/local/api/v1/products/**").uri("lb://ms-product"))
                 .route(r -> r.path("/local/api/v1/stores/**").uri("lb://ms-store"))
+                .route(r -> r.path("/local/api/v1/clients/**").uri("lb://ms-client"))
+                .route(r->r.path("/local/api/v1/orders/**").uri("lb://ms-order"))
                 .build();
     }
 
