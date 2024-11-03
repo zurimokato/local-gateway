@@ -17,6 +17,7 @@ public class GateWayConfig {
                 .route(r -> r.path("/local/api/v1/clients/**").uri("lb://ms-client"))
                 .route(r->r.path("/local/api/v1/orders/**").uri("lb://ms-order"))
                 .route(r->r.path("/local/api/v1/notifications/**").uri("lb://ms-notification"))
+                .route(r->r.path("/local/api/v1/menus/**").uri("lb://ms-menu"))
                 .build();
     }
 
