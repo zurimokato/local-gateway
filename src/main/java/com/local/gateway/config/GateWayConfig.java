@@ -43,6 +43,8 @@ public class GateWayConfig {
                         .filters(f->
                                 f.filter(authenticationFilter.apply(new AuthenticationFilter.Config())))
                         .uri("lb://ms-menu"))
+                .route(r->r.path("/local/api/v1/auth/**")
+                        .uri("lb://ms-authorization"))
 
                 .build();
     }
